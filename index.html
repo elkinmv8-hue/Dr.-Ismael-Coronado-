@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ismael Coronado - Abogado</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Inter',sans-serif;background:linear-gradient(#0b1f3a,#020617);color:#f5d27a}
+.container{padding:20px;text-align:center}
+.logo{width:100px;margin:auto}
+.foto{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid #d4af37;margin:15px auto}
+h1{font-family:'Playfair Display',serif;margin:10px 0}
+.subtitle{font-size:14px;margin-bottom:10px}
+.card{background:#122b4a;border-radius:12px;border:1px solid #d4af37;margin:10px 0;overflow:hidden}
+.card-header{padding:15px;cursor:pointer;display:flex;justify-content:space-between}
+.card-content{max-height:0;overflow:hidden;transition:max-height 0.5s ease;padding:0 15px}
+.card.active .card-content{max-height:1000px;padding:15px}
+.btn{display:block;margin-top:10px;padding:10px;background:#d4af37;color:#000;text-decoration:none;border-radius:8px}
+.footer a{display:block;color:#f5d27a;text-decoration:none;margin:5px 0}
+</style>
+</head>
+<body>
+
+<div class="container">
+<img src="logo.png" class="logo">
+<img src="foto.jpg" class="foto">
+
+<h1>Ismael Coronado</h1>
+<p class="subtitle"><strong>Abogado Especialista en Derecho Administrativo y Contratación Estatal</strong></p>
+
+<div class="card">
+<div class="card-header" onclick="toggle(this)">Perfil Profesional +</div>
+<div class="card-content">
+<p>Abogado con sólida trayectoria en las áreas de derecho penal, civil, laboral y de familia, reconocido por su compromiso, ética y responsabilidad en la defensa de los intereses de sus clientes. Cuenta con amplia experiencia en asesoría jurídica y representación en procesos judiciales, brindando soluciones efectivas y un acompañamiento cercano en cada caso.</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header" onclick="toggle(this)">⚖️ Penal +</div>
+<div class="card-content">
+<p>Amplia experiencia en la defensa y representación de clientes en procesos penales, garantizando el debido proceso.</p>
+<a class="btn" href="https://wa.me/573136232176">Contactar</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header" onclick="toggle(this)">📑 Civil +</div>
+<div class="card-content">
+<p>Asesoría en conflictos civiles relacionados con contratos y obligaciones.</p>
+<a class="btn" href="https://wa.me/573207066912">Contactar</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header" onclick="toggle(this)">💼 Laboral +</div>
+<div class="card-content">
+<p>Representación en conflictos laborales y derechos del trabajador.</p>
+<a class="btn" href="https://wa.me/573136232176">Contactar</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header" onclick="toggle(this)">👨‍👩‍👧 Familia +</div>
+<div class="card-content">
+<p>Divorcios, custodia, alimentos y procesos familiares.</p>
+<a class="btn" href="https://wa.me/573207066912">Contactar</a>
+</div>
+</div>
+
+<div class="footer">
+<a href="tel:3136232176">📞 3136232176</a>
+<a href="tel:3207066912">📞 3207066912</a>
+<a href="mailto:Coronado16.2627@gmail.com">📧 Email</a>
+<a href="https://instagram.com/Asesoria_Coronado">📸 Instagram</a>
+</div>
+
+</div>
+
+<script>
+function toggle(el){
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(c=>{
+    if(c!==el.parentElement){
+      c.classList.remove('active');
+    }
+  });
+  el.parentElement.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
